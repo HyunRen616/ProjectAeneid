@@ -60,7 +60,7 @@ public:
     }
 
     void startCombat() {
-        std::cout << "Combat begins between " << player.name << " and " << enemy.name << "!\n";
+        cout << "Combat begins between " << player.name << " and " << enemy.name << "!\n";
 
         // Determine first turn based on speed
         while (player.isAlive() && enemy.isAlive()) {
@@ -73,14 +73,14 @@ public:
             }
         }
 
-        std::cout << (player.isAlive() ? "You win!" : "You lose!") << "\n";
+        cout << (player.isAlive() ? "You win!" : "You lose!") << "\n";
     }
 };
 
 int main() {
     srand(time(0)); // Seed random generator
 
-    Character player("Seeker", 10, 5, 100, 8, 15, 12);
+    Character player("Magician", 10, 5, 100, 8, 15, 12);
     Character enemy("Corrupted Beast", 8, 4, 80, 6, 12, 10);
 
     Combat combat(player, enemy);
